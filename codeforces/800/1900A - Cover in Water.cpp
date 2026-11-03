@@ -33,3 +33,18 @@ int main() {
     while (t--) solve();
     return 0;
 }
+
+
+/*
+APPROCH :
+Steps:
+1. Read the number of test cases t.
+2. For each test case, read n and the string s.
+3. Check if s contains three consecutive empty cells "..." using s.find("...").
+4. If "..." exists, print 2. The middle cell of "..." refills itself, so its water can be moved to any other empty cell with action 2 (free).
+5. Otherwise, print the total count of '.' in s, since each empty cell needs action 1 separately.
+
+Time Complexity : O(n) per test case
+Space Complexity : O(1)
+note: Answer is either 2 (if "..." is present) or the number of empty cells.
+*/
